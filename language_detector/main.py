@@ -10,7 +10,7 @@ def detect_language(text, languages):
     for language in LANGUAGES:
         match = len([ x for x in textlist if x in language['common_words']])
         result[match] = language['name']
-    mylang = result[max(result.keys())]
+    mylang = result[max(list(result.keys()))]
     return mylang
     
 #detect_language(text,LANGUAGES)
